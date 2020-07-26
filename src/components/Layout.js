@@ -1,8 +1,7 @@
 import React from 'react'
-import Header from '../components/Header'
-import Navbar from './Navbar'
+import Menu from './Menu'
 import Footer from './Footer'
-import Style from '../styles/style.css';
+import '../styles/style.css';
 
 class Layout extends React.Component {
   render() {
@@ -10,8 +9,8 @@ class Layout extends React.Component {
    
     return (
       <div className="body">
-        <Header />
-        <Navbar />
+     
+        <Menu />
         <br />
         {children}
         <Footer />
