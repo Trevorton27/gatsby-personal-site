@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from './Menu'
 import Footer from './Footer'
-import Header from './Header'
+
 import '../styles/style.css';
 import { Container } from 'react-bootstrap';
 
@@ -11,8 +11,7 @@ class Layout extends React.Component {
 
     return (
       <div>
-        <Menu sticky="top" />
-        <Header/>
+       
         <Container className="body">
           <br />
           {children}

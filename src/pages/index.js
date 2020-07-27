@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
+import Header from '../Components/Header';
+import Menu from '../components/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from '../components/Layout'
@@ -16,7 +18,10 @@ class SiteIndex extends React.Component {
     )
 
     return (
-      <Layout>
+      <div>
+         <Menu sticky="top" />
+        <Header/>
+          <Layout>
         <Helmet>
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
@@ -38,6 +43,8 @@ class SiteIndex extends React.Component {
         </p>
         <img src={DisplayImage} alt={siteTitle} />
       </Layout>
+      </div>
+    
     );
   }
 }
