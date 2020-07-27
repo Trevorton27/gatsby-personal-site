@@ -10,6 +10,8 @@ const styles = {
     letterSpacing: 2,
     color: 'gray',
     paddingTop: 15,
+    minHeight: '6em',
+    backgroundColor: '#343a40'
   },
 }
 
@@ -20,7 +22,8 @@ export class Footer extends Component {
         Built with&nbsp;
         <a href="https://gatsbyjs.org" target="_blank">
           GatsbyJS
-        </a>
+        </a> 
+        &nbsp; by Trevor Mearns 
       </div>
     )
   }
