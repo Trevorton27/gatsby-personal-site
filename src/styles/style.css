@@ -28,6 +28,22 @@ a.nav-link:hover {
       background-size: 100%;
   }
 
+  .title {
+      margin-top: 2em;
+  }
+
+  .about-me{
+      max-width: 60%;
+      padding-left: 25%;
+  }
+  .btn {
+      margin-top: 2em;
+      font-size: 23px !important;
+      min-width: 8em !important;
+      padding-top: .3em !important;
+  }
+
+
   @media all and (max-width: 480px) { 
    .jumbotron {
    
@@ -45,5 +61,15 @@ a.nav-link:hover {
        font-size: 20px;
        margin-left: 2em;
        margin-right: 4em;
+   }
+   .about-me{
+       padding-left: 10px;
+       margin-right: 20px;
+   }
+   .spacer {
+       display: none;
+   }
+   #button{
+       margin-left: 20%;
    }
   }

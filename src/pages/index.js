@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet'
 import Header from '../Components/Header';
 import Menu from '../components/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Layout from '../components/Layout'
-import DisplayImage from './../assets/images/main_image.jpg'
+import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap'
+import '../styles/style.css';
 
 class SiteIndex extends React.Component {
   render() {
@@ -19,32 +19,59 @@ class SiteIndex extends React.Component {
 
     return (
       <div>
-         <Menu sticky="top" />
-        <Header/>
-          <Layout>
-        <Helmet>
-          <title>{siteTitle}</title>
-          <meta name="description" content={siteDescription} />
-        </Helmet>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-          eget arcu dictum varius duis. Vestibulum lectus mauris ultrices eros
-          in cursus turpis. Blandit volutpat maecenas volutpat blandit aliquam
-          etiam. Sagittis purus sit amet volutpat. Nullam ac tortor vitae purus
-          faucibus ornare suspendisse. Vulputate sapien nec sagittis aliquam
-          malesuada. Quis imperdiet massa tincidunt nunc pulvinar sapien et
-          ligula ullamcorper. Sit amet cursus sit amet dictum sit amet.
-          Malesuada proin libero nunc consequat interdum varius sit amet. Sed
-          egestas egestas fringilla phasellus faucibus scelerisque eleifend.
-          Habitasse platea dictumst quisque sagittis. Sem viverra aliquet eget
-          sit amet tellus cras adipiscing enim. Amet massa vitae tortor
-          condimentum lacinia quis vel eros donec.
-        </p>
-        <img src={DisplayImage} alt={siteTitle} />
-      </Layout>
+        <Menu sticky="top" />
+        <Header />
+        <Layout>
+          <Helmet>
+            <title>{siteTitle}</title>
+            <meta name="description" content={siteDescription} />
+          </Helmet>
+          <Container >
+            <Row >
+            <Col className="spacer"></Col>
+             <Col>
+             <h2>About Me.</h2>
+                  <br></br>
+                  <p> A student of life with a deep interest in software development and figuring out how things work. I love to learn and create things. I love to make new connections and to improve both myself and the world around me.
+                </p><p>My life has seen me through an amazing variety of experiences and endeavors. And they have all served to enrich my appreciation of people and the potential to leverage our creativity and service to each other through technology. </p>
+
+             </Col>
+             
+             <Col className="spacer"></Col>
+            </Row>
+            <Row>
+              <Col>
+              
+                  <h2 >Journey.</h2>
+                  <br></br>
+
+                  <ListGroup variant="flush" >
+                    <ListGroup.Item className="journey-list">Born in Seattle Washington</ListGroup.Item>
+                    <ListGroup.Item>Learned how to be a human</ListGroup.Item>
+                    <ListGroup.Item>Went to school for instructional design & technology</ListGroup.Item>
+                    <ListGroup.Item>Met a girl</ListGroup.Item>
+                    <ListGroup.Item>Married aforementioned girl</ListGroup.Item>
+                    <ListGroup.Item>Moved to Japan with aforementioned girl</ListGroup.Item>
+                    <ListGroup.Item>Learned to speak Japanese</ListGroup.Item>
+                    <ListGroup.Item>Became a daddy</ListGroup.Item>
+                    <ListGroup.Item>Started a business</ListGroup.Item>
+                    <ListGroup.Item>Discovered software development</ListGroup.Item>
+                    <ListGroup.Item>Decided it was the way to go, man.</ListGroup.Item>
+                  </ListGroup>
+                
+
+
+              </Col>
+            </Row>
+            <Row>
+              <Col>1 of 2</Col>
+              <Col>2 of 2</Col>
+            </Row>
+          </Container>
+
+        </Layout>
       </div>
-    
+
     );
   }
 }

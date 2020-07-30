@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-minimal-portfolio-blog',
-    author: 'Sai Krishna',
+    title: 'Trevor Mearns Personal Site',
+    author: 'Trevor Mearns',
     description:
-      'GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.',
-    siteUrl: 'https://saikrishna.me',
+      'Personal Website & Repository Of Thoughts.',
+    siteUrl: 'https://trevormearns.com',
   },
   pathPrefix: '/',
   plugins: [
@@ -55,7 +55,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/images/starFavicon.png`,
       },
     },
     `gatsby-plugin-offline`,
