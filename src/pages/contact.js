@@ -24,7 +24,7 @@ class Contact extends React.Component {
         <h2>Contact</h2>
         <br />
 
-        <Form name="Contact Form" id="contact-form-wrapper" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
+        <Form name="Contact Form" id="contact-form-wrapper" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" action="/success">
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="Contact Form" />
           <Row className="fluid" id="contact-form-names-field">

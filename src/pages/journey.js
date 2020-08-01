@@ -7,7 +7,6 @@ import {
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import { graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 import './../styles/timeline.css'
