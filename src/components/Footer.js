@@ -5,13 +5,13 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    fontSize: 10,
-    textTransform: 'uppercase',
+    fontSize: 14,
     letterSpacing: 2,
     color: 'gray',
-    paddingTop: 15,
+    paddingTop: 20,
     minHeight: '6em',
-    backgroundColor: '#343a40'
+    backgroundColor: '#343a40',
+    color: '#fff'
   },
 }
 
