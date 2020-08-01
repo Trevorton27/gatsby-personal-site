@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // const styles = {
 //   rootContainer: {
@@ -21,15 +22,17 @@ import React, { Component } from 'react'
 export class Footer extends Component {
   render() {
     return (
-      <div className="container">
-        
-      <div className="footer row align-items-end"">
-        Built with&nbsp;
+      <Container fluid >
+        <Row className="footer">
+          <Col>
+            Built with&nbsp;
         <a href="https://gatsbyjs.org" target="_blank">
-          GatsbyJS
-        </a> 
-        &nbsp; by Trevor Mearns 
-      </div>
+              GatsbyJS
+        </a>
+        &nbsp; by Trevor Mearns
+      </Col>
+        </Row>
+      </Container>
     )
   }
 }
