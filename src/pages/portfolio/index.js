@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import { Grid, Row, Col } from 'react-flexbox-grid'
-
 import Layout from '../../components/Layout'
 import portfolioData from './../../data/portfolio'
 

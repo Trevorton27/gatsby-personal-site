@@ -2,13 +2,14 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Header from '../Components/Header';
 import Menu from '../components/Menu';
+import Header from '../components/Header';
 import IntroVideo from '../components/IntroVideo';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/Layout'
-import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap'
+import { Container, Row, Col, ListGroup, Jumbotron, Button } from 'react-bootstrap'
 import '../styles/style.css';
+import Footer from '../components/Footer';
 
 
 class SiteIndex extends React.Component {
@@ -21,17 +22,16 @@ class SiteIndex extends React.Component {
 
     return (
       <div>
-        <Menu sticky="top" />
+
+        <Helmet>
+          <title>{siteTitle}</title>
+          <meta name="description" content={siteDescription} />
+        </Helmet>
+        <Menu />
         <Header />
-        <Layout>
-          <Helmet>
-            <title>{siteTitle}</title>
-            <meta name="description" content={siteDescription} />
-          </Helmet>
-          <div className="main-container" >
-          <Container >
+          <div  >
+          <Container className="main-container">
             <Row >
-             
               <Col>
                 <h2>About Me.</h2>
                 <br></br>
@@ -39,21 +39,17 @@ class SiteIndex extends React.Component {
                 </p><p>My life has seen me through an amazing variety of experiences and endeavors. And they have all served to enrich my appreciation of people and the potential to leverage our creativity and service to each other through technology. </p>
 
               </Col>
-
-           
             </Row>
             <Row>
               <Col>
-              <IntroVideo />
+                <IntroVideo />
               </Col>
             </Row>
             <Row>
-              <Col 
-               >
-
+              <Col>
                 <h2 >Journey.</h2>
                 <br></br>
-              
+
                 <ListGroup variant="flush" >
                   <ListGroup.Item className="journey-list">Born in Seattle Washington</ListGroup.Item>
                   <ListGroup.Item>Learned how to be a human</ListGroup.Item>
@@ -68,19 +64,19 @@ class SiteIndex extends React.Component {
                   <ListGroup.Item>Decided it was the way to go, man.</ListGroup.Item>
                 </ListGroup>
               </Col>
-            
             </Row>
             <Row>
               <Col>1 of 2</Col>
               <Col>2 of 2</Col>
+            
             </Row>
+        
           </Container>
-          </div>
-          
-
-        </Layout>
+        
+        </div>
+        <Footer />
       </div>
-
+      
     );
   }
 }

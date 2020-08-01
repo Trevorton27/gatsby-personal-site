@@ -31,7 +31,6 @@ export class Menu extends Component {
             <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
             <Nav.Link href="https://github.com/Trevorton27">GitHub</Nav.Link>
             <Navbar.Text>
-              <Mail />
             </Navbar.Text>
           </Nav>
         </Navbar.Collapse>

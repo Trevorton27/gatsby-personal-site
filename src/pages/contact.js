@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Row, Col, Form, Button } from 'react-bootstrap'
 import Layout from '../components/Layout'
-
+import Menu from '../components/Menu';
 class Contact extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -14,17 +14,19 @@ class Contact extends React.Component {
     )
 
     return (
+      <div>
+         <Menu top="sticky" />
       <Layout>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Contact | ${siteTitle}`}
         />
-
-        <h2>Contact</h2>
+        
+        <h1 id="contact-title">Contact</h1>
         <br />
-
-        <Form name="Contact Form" id="contact-form-wrapper" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" action="/success">
+        <div id="contact-form-wrapper" >
+        <Form name="Contact Form"  data-netlify="true" data-netlify-honeypot="bot-field" method="POST" action="/success">
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="Contact Form" />
           <Row className="fluid" id="contact-form-names-field">
@@ -52,8 +54,11 @@ class Contact extends React.Component {
             </Col>
           </Row>
         </Form>
-
+        </div>
+      
       </Layout>
+      </div>
+     
     )
   }
 }
